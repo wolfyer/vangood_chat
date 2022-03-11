@@ -1,5 +1,6 @@
 package com.vangood.chat
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -60,6 +61,10 @@ class RoomActivity : AppCompatActivity() {
             val message = binding.tnLadesi.text.toString()
             websocket.send(Gson().toJson(Message("N",message)))
             binding.tnShowLadesi.setText(message)
+        }
+        binding.bOutroom.setOnClickListener {
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
         }
 
     }
