@@ -6,4 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".RoomActivity">
 
+    <EditText
+        android:id="@+id/tn_ladesi"
+        android:layout_width="298dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="say something"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/b_ladesi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner"
+        android:text="talk"
+        app:icon="@android:drawable/stat_notify_chat"
+        app:layout_constraintBottom_toBottomOf="@+id/tn_ladesi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tn_ladesi"
+        app:layout_constraintTop_toTopOf="@+id/tn_ladesi" />
+
+    <TextView
+        android:id="@+id/tn_show_ladesi"
+        android:layout_width="236dp"
+        android:layout_height="198dp"
+        android:layout_marginBottom="220dp"
+        android:text="Show Talking"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,6 +31,10 @@ class MainActivity : AppCompatActivity() {
             val intenth = Intent(this,LoginActivity::class.java)
             startActivity(intenth)
         }
+        binding.bRoomOne.setOnClickListener {
+            val intentro = Intent(this,RoomActivity::class.java)
+            startActivity(intentro)
+        }
 
 
     }
