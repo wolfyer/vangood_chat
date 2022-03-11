@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContract
 import com.vangood.chat.databinding.ActivityMainBinding
-import java.util.zip.Inflater
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding
