@@ -33,14 +33,14 @@ class LoginActivity : AppCompatActivity() {
                     .apply()
 
             }
-            val prefUser = pref.getString(Extras.USERNAME,"")
-            val prefPass = pref.getString(Extras.PASSWORD,"")
-            if (prefUser != ""){
-                binding.tnName.setText(prefUser)
-                binding.tnPassword.setText(prefPass)
-            }
-        }
 
+        }
+        val prefUser = pref.getString(Extras.USERNAME,"")
+        val prefPass = pref.getString(Extras.PASSWORD,"")
+        if (prefUser != ""){
+            binding.tnName.setText(prefUser)
+            binding.tnPassword.setText(prefPass)
+        }
         binding.bLogin.setOnClickListener {
             val username = binding.tnName.text.toString()
             val password = binding.tnPassword.text.toString()
@@ -48,8 +48,8 @@ class LoginActivity : AppCompatActivity() {
             if (username == "jack" && password == "1234"){
                 if (remember){
                     pref.edit()
-                        .putString(Extras.USERNAME,"")
-                        .putString(Extras.PASSWORD,"")
+                        .putString(Extras.USERNAME,username)
+                        .putString(Extras.PASSWORD,password)
                         .apply()
                 }
                 val intent = Intent(this,MainActivity::class.java)

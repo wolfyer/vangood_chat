@@ -2,6 +2,7 @@ package com.vangood.chat
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContract
@@ -15,6 +16,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupBottom()
+        var videoviewone = binding.vRooomOne
+        val uri:Uri = Uri.parse("android.resource://"+packageName+"/"+"raw/her01")
+        videoviewone.setVideoURI(uri)
+        videoviewone.setOnPreparedListener {
+            videoviewone.start()
+        }
 
     }
 
